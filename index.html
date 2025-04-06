@@ -39,7 +39,7 @@ h1, h2, h3 {
 
 @media (max-width: 768px) {
   h2 {
-    font-size: 1.2rem !important;}
+    font-size: 2rem !important;}
     p, li, a {
       font-size: 1rem;
     }
@@ -173,7 +173,7 @@ html {
 }
 .scroll-indicator {
   position: absolute;
-  bottom: 30px;
+  bottom: 2.5rem; /* ajustable */
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
@@ -181,6 +181,13 @@ html {
   flex-direction: column;
   align-items: center;
   animation: float 2s infinite ease-in-out;
+  z-index: 10;
+  pointer-events: none;
+}
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .scroll-indicator {
+    bottom: calc(env(safe-area-inset-bottom) + 2.5rem);
+  }
 }
 
 .mouse {
@@ -406,7 +413,7 @@ html {
                              
                                 <div class="certification-card">
                                     <div class="certification-icon">
-                                        <img src="https://gilleslecouster.fr/wp-content/uploads/Logo-SecNum.jpg" alt="DRSD">
+                                        <img src="https://cyber.gouv.fr/sites/default/files/2017/05/secnumacademie_toque.png" alt="DRSD">
                                     </div>
                                     <div class="certification-content">
                                         <h3>SecNumAcadémie</h3>
@@ -418,7 +425,7 @@ html {
         <!-- Certification 2 -->
         <div class="certification-card">
             <div class="certification-icon">
-                <img src="data:image/png;base64,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" alt="DRSD">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Commission_Nationale_de_l%E2%80%99Informatique_et_des_Libert%C3%A9s_logo.svg" alt="DRSD">
             </div>
             <div class="certification-content">
                 <h3>CNIL : Mooc sur la RGPD</h3>
