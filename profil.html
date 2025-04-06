@@ -32,6 +32,10 @@
     }
 
 @media (max-width: 768px) {
+    .section-container {
+    margin-top: 60px; /* Ajouté */
+    
+}
   h2 {
     font-size: 1.6rem !important;}
     p, li, a {
@@ -202,6 +206,50 @@
     .content h2 {
         font-size: 1.8rem;
     }
+}
+
+@media (max-width: 768px) {
+  .image-containere,
+  .image-container {
+    display: none !important;
+  }
+
+  .section-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
+  .text-container h1,
+  .text-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .text-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-board {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 10px;
+    height: auto;
+  }
+
+  .card {
+    aspect-ratio: 1 / 1;
+    font-size: 0.9rem;
+  }
+
+  .game-container {
+    height: auto;
+    padding-bottom: 30px;
+  }
 }
     </style>
 </head>
