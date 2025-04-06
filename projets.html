@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes Projets</title>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="stylenavbar.css">
+    <link rel="stylesheet" href="styleprojects.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const icon = document.getElementById('menuIcon');
+    
+            sidebar.classList.toggle('expanded');
+    
+            if (sidebar.classList.contains('expanded')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times'); // croix
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars'); // burger
+            }
+        }
+    </script>
+
+    <!-- Navbar -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-btn" onclick="toggleSidebar()" id="menuToggle">
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="home"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="entreprise.html" class="entreprise"><i class="fas fa-briefcase"></i><span>Mes expériences</span></a></li>
+            <li><a href="projets.html" class="realisations active"><i class="fas fa-layer-group"></i><span>Mes projets</span></a></li>
+            <li><a href="veille.html" class="veille"><i class="fas fa-globe"></i><span>Veille</span></a></li>
+            <li><a href="profil.html" class="bilan"><i class="fas fa-user"></i><span>Bilan</span></a></li>
+        </ul>
+    </div>
+
+    <section class="hautpage">
+        <h1>Travaux et Projets réalisés</h1>
+        <hr>
+        <h2>Un aperçu de mes réalisations techniques développées au fil de ma formation, entre cours pratiques, ateliers encadrés et expériences professionnelles. </h2>
+        <br> <a href="synthèse Epreuve E4 G.Tony LAMBERT-TATHY.pdf" class="certification-button"><i class="fas fa-file"></i> Voir la fiche de synthèse des compétences</a> </br>
+        
+    </section>
+
+    <div class="containerprojets">
+        <div class="section">
+            
+              
+                <!-- FTP sécurisé -->
+                                                <a href="rtlindustrie.html">  <div class="card">
+                                                    <img src="rtl logo.png" alt="FTP TLS">
+                                                    <div class="card-content">
+                                                      <h3>RTL Industrie – E5 </h3>
+                                                      <p> <strong>Déploiement d’une infrastructure réseau </strong></p>
+                                                    </div>
+                                                  </div></a>
+            
+            
+            <!-- FTP sécurisé -->
+                <a href="mabanque.html"><div class="card">
+                  <img src="bank.avif" alt="FTP TLS">
+                  <div class="card-content">
+                    <h3>Projet M@ Banque </h3>
+                    <p> <strong>Sécurisation d’une banque avec Linux & Windows Server</strong>
+                     </p>
+                  </div>
+                </div></a>
+
+                                                 
+
+                                <!-- FTP sécurisé -->
+                               <a href="infodev.html"> <div class="card">
+                                    <img src="infodevlogo.jpeg" alt="FTP TLS">
+                                    <div class="card-content">
+                                      <h3>Projet InfoDev  </h3>
+                                      <p> <strong>Gestion de projet avec Trello et méthode Kanban</strong>
+                                    </div>
+                                  </div></a>
+
+                                                                  <!-- FTP sécurisé -->
+                              <a href="gsb.html"> <div class="card">
+                                    <img src="gsblogo.png" alt="FTP TLS">
+                                    <div class="card-content">
+                                      <h3>Projet GSB – Site web statique </h3>
+                                      <p> <strong>Création d’un site vitrine responsive pour le laboratoire GSB</strong>
+                                          </p>
+                                    </div>
+                                  </div></a> 
+              
+                             
+
+                                  <a href="apt41.html"><div class="card">
+                                    <img src="apt41-double-dragon.png.webp" alt="FTP TLS">
+                                    <div class="card-content">
+                                      <h3> APT 41 – Double Dragon   </h3>
+                                      <p> <strong>Etude d'une menace persistante avancée réelle APT41.</strong>
+                                          </p>
+                                    </div>
+                                  </div></a>
+
+
+                                </div>
+    </div>
+    
+
+    <section class="fond">
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="logo lt blanc.png" alt="Logo">
+                    <p>G.Tony LAMBERT-TATHY</p>
+                    <p>© 2025. Tous droits réservé.</p>
+                </div>
+                <div class="footer-section">
+                    <h4><strong>Navigation</strong></h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="entreprise.html">Mes expériences</a></li>
+                        <li><a href="projets.html">Mes projets</a></li>
+                        <li><a href="veille.html">Ma veille</a></li>
+                        <li><a href="profil.html">Mon bilan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><strong>Contact</strong></h4>
+                    <ul>
+                        <li><a href="mailto:g.tony@lamberttathy.com">G.tony@lamberttathy.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/g-tony-lambert-tathy-54774123a">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><strong>Informations</strong></h4>
+                    <ul>
+                        <li><a href="mentionslégales.html">Mentions Légales</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+            <a href="#top" class="back-to-top">↑</a>
+        </footer>
+    </section>
+
+   
+</body>
+</html>

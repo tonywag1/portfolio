@@ -1,0 +1,203 @@
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100vh;
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 250px; /* Décale l'ensemble des icônes vers le bas */
+    transition: width 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.sidebar.expanded {
+    width: 220px;
+}
+
+.menu-btn {
+    cursor: pointer;
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-links li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a i {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar.expanded .nav-links a {
+    justify-content: flex-start;
+    padding-left: 20px;
+    width: 100%;
+}
+
+.sidebar.expanded .nav-links a span {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.nav-links a span {
+    display: none;
+}
+
+.sidebar.expanded .nav-links a {
+    justify-content: flex-start;
+}
+
+/* Couleurs glaciales pour chaque section au survol */
+.nav-links a.home:hover {
+    background-color: #a3daff;
+}
+.nav-links a.entreprise:hover {
+    background-color: #ffccd5;
+}
+.nav-links a.realisations:hover {
+    background-color: #c7f9cc;
+}
+.nav-links a.veille:hover {
+    background-color: #b2eaff;
+}
+.nav-links a.bilan:hover {
+    background-color: #e0bbff;
+}
+
+/* Couleurs glaciales pour les sections actives avec ombre colorée */
+.nav-links a.active.home {
+    background-color: #66b2ff;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(102, 178, 255, 0.5);
+}
+.nav-links a.active.entreprise {
+    background-color: #ff8c94;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(255, 140, 148, 0.5);
+}
+.nav-links a.active.realisations {
+    background-color: #98e2b2;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(152, 226, 178, 0.5);
+}
+.nav-links a.active.veille {
+    background-color: #7fd8ff;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(127, 216, 255, 0.5);
+}
+.nav-links a.active.bilan {
+    background-color: #c085ff;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(192, 133, 255, 0.5);
+}
+
+.nav-links a.active {
+    transform: translateX(10px);
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #e0e0e0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        transition: height 0.3s ease;
+        overflow: hidden;
+        z-index: 999;
+    }
+
+    .sidebar.expanded {
+        width: 100vw;       /* ✅ prend toute la largeur */
+        height: 100vh;      /* ✅ prend toute la hauteur */
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 60px;
+        background-color: #e0e0e0;
+        overflow-y: auto;
+    }
+
+    .menu-btn {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 20px;
+        z-index: 1001;
+        font-size: 24px;
+        color: #333;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+    }
+
+    .sidebar.expanded .nav-links {
+        display: flex;
+        padding-left: 20px;
+    }
+
+    .nav-links li {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: 10px;
+        height: 50px;
+    }
+
+    .nav-links a span {
+        display: inline-block;
+        margin-left: 15px;
+    }
+}
+

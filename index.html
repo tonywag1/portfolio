@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylenavbar.css">
+     <!-- Font Awesome Icons -->
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+     <!-- Font Awesome Icons -->
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Mes expériences professionnelles</title>
+    <style>
+        body {
+           
+            background-color: #EAEAEA;
+            margin: 0;
+        }
+        body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3 {
+      font-weight: 500;
+      color: #000;
+    }
+
+    p, li, a {
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.2rem !important;}
+    p, li, a {
+      font-size: 1rem;
+    }
+  
+}
+    p {
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+  
+
+    
+
+        @media (max-width: 768px) {
+    .titre-responsive {
+        white-space: normal !important;
+        font-size: 2.2rem !important;
+    }
+
+ 
+}
+
+     
+ 
+
+
+
+
+
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8%;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+  padding-left: 80px; /* espace pour la sidebar */
+}
+
+.titre-responsive {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.barre-titre {
+  height: 4px;
+  background-color: black;
+  border-radius: 2px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  max-width: 600px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding-left: 0;
+  }
+
+  .titre-responsive {
+    font-size: 2.3rem;
+  }
+
+ 
+}
+html {
+  scroll-behavior: smooth;
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: float 2s infinite ease-in-out;
+}
+
+.mouse {
+  width: 25px;
+  height: 45px;
+  border: 3px solid #000;
+  border-radius: 20px;
+  position: relative;
+}
+
+.mouse::after {
+  content: "";
+  width: 4px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-wheel 1.5s infinite;
+}
+
+.arrow {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #000;
+  animation: bounce 2s infinite;
+}
+
+.arrow::before {
+  content: "⌄"; /* flèche vers le bas */
+  font-size: 1.5rem;
+}
+
+@keyframes scroll-wheel {
+  0% { opacity: 1; top: 10px; }
+  100% { opacity: 0; top: 25px; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -5px); }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <section class="contenue">
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const icon = document.getElementById('menuIcon');
+    
+            sidebar.classList.toggle('expanded');
+    
+            if (sidebar.classList.contains('expanded')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times'); // croix
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars'); // burger
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+    <!-- Navbar -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-btn" onclick="toggleSidebar()" id="menuToggle">
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="home active"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="entreprise.html" class="entreprise "><i class="fas fa-briefcase"></i><span>Mes expériences</span></a></li>
+            <li><a href="projets.html" class="realisations"><i class="fas fa-layer-group"></i><span>Mes projets</span></a></li>
+            <li><a href="veille.html" class="veille"><i class="fas fa-globe"></i><span>Veille</span></a></li>
+            <li><a href="profil.html" class="bilan"><i class="fas fa-user"></i><span>Bilan</span></a></li>
+        </ul>
+    </div>
+
+    <section class="hero-section">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1 class="titre-responsive">Bonjour, <br>je m'appelle G.Tony <br>LAMBERT-TATHY</h1>
+            <div class="barre-titre"></div>
+           
+          </div>
+          <div class="hero-image">
+            <img src="moi3.png" alt="Présentation Réalisations">
+          </div>
+        </div>
+        <!-- Scroll Indicator -->
+<a href="#entreprise" class="scroll-indicator">
+    <div class="mouse"></div>
+    <div class="arrow"></div>
+  </a>
+  
+    </section>
+
+ <!-- Nouvelle section Présentation -->
+<section class="presentation" id="présentation" class="fondhero">  
+    <div class="illustrationg">
+       <img src="moipres.png" alt="Illustration Présentation">
+   </div>
+   <div class="contente">
+       <h2>Présentation</h2>
+       <hr>
+       
+       <p>
+           Étudiant en <strong>BTS SIO option SISR</strong>, je me forme aux métiers des systèmes, réseaux et de la cybersécurité à travers un enseignement technique solide et des projets concrets. 
+           J’ai complété cette formation par des stages en entreprise, notamment chez <strong>Smartgap</strong>, où j’ai travaillé sur des projets d’automatisation et de cybersécurité, 
+           ainsi que chez <strong>TIBCO Services</strong>, où j’ai participé au déploiement et à la maintenance d’infrastructures informatiques. 
+           Ces expériences m’ont permis de mettre en pratique mes compétences et d’affiner mon projet professionnel. 
+           Mon objectif est de devenir <strong>architecte en cybersécurité</strong>.
+       </p>
+       <!-- Bouton pour télécharger le CV -->
+       <br> <a href="CV-G.Tony LAMBERT-TATHY.pdf" class="certification-button"><i class="fas fa-file"></i>Mon cv</a> </br>
+   </div>
+
+</section>
+
+  <style>
+.illustrationg{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.illustrationgimg {
+    width: 350px;
+    
+}
+
+.presentation hr {
+    width: 80px;
+    height: 4px;
+    background-color: #4b0082;
+    border: none;
+    margin: 0 auto 40px;
+}
+.presentation {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.presentation .contente {
+    flex: 1;
+   
+}
+
+
+
+.presentation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #000;
+    text-align: center;
+}
+
+.presentation p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .illustrationg {
+    display: none;
+  }
+}
+  </style>
+
+
+<section class="certifications">
+    <h2>Certifications</h2>
+    <hr>
+    <div class="certification-grid">
+        <!-- Certification 1 -->
+                             
+                                <div class="certification-card">
+                                    <div class="certification-icon">
+                                        <img src="SecNumAcadémie.png" alt="DRSD">
+                                    </div>
+                                    <div class="certification-content">
+                                        <h3>SecNumAcadémie</h3>
+                                        <p>C'est un MOOC qui initie à la Cybersécurité.</p>
+                                        <a href="Attestation-SecNumAcadémie.pdf" class="certification-button"><i class="fas fa-file"></i> Voir l'attestation</a>
+                                    </div>
+                                </div>
+
+        <!-- Certification 2 -->
+        <div class="certification-card">
+            <div class="certification-icon">
+                <img src="https://loic-ledoher.fr/images/Acceuil/CNIL_logo.png" alt="DRSD">
+            </div>
+            <div class="certification-content">
+                <h3>CNIL : Mooc sur la RGPD</h3>
+                <p>Le MOOC permet de sensibiliser à la protection des données. (Pendant le BTS SIO SISR)</p>
+                <a href="Mood rgpd.pdf" class="certification-button"><i class="fas fa-file"></i> Voir l'attestation</a>
+            </div>
+        </div>
+
+        <!-- Certification 3 -->
+        <div class="certification-card">
+            <div class="certification-icon">
+                <img src="cisco-png-logo-3765.png" alt="DRSD">
+            </div>
+            <div class="certification-content">
+                <h3>CISCO Networking Essentiel</h3>
+                <p>Le certificat Cisco Networking Essentials initie aux bases des réseaux informatiques.(Pendant le Bac pro S.N)</p>
+                <a href="Network essentials.pdf" class="certification-button"><i class="fas fa-file"></i> Voir l'attestation</a>
+            </div>
+        </div>
+
+        <!-- Certification 2 -->
+        <div class="certification-card">
+            <div class="certification-icon">
+                <img src="cisco-png-logo-3765.png" alt="CISCO">
+            </div>
+            <div class="certification-content">
+                <h3>CISCO IT Essentiel </h3>
+                <p>Le certificat Cisco IT Essentials forme aux bases du matériel, des logiciels et de la maintenance informatique. (Pendant le Bac pro S.N)</p>
+                <a href="It essentiels.pdf" class="certification-button"><i class="fas fa-file"></i> Voir l'attestation</a>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<style>
+.certifications {
+    text-align: center;
+    padding: 50px 100px;
+    background-color: #EAEAEA;
+}
+
+.certifications h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.certifications hr {
+    width: 80px;
+    height: 4px;
+    background-color: #4b0082;
+    border: none;
+    margin: 0 auto 40px;
+}
+
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    justify-items: center;
+}
+
+.certification-card {
+    display: flex;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    align-items: center;
+    width: 90%;
+    width: 600px;
+    height: 250px;
+}
+
+.certification-icon {
+    background-color: #d1d1d1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100%;
+}
+
+.certification-icon img {
+    max-width: 100px;
+}
+
+.certification-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.certification-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.certification-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.certification-button {
+    background-color: #4b0082;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    align-self: center;
+    margin-top: auto;
+}
+
+.certification-button i {
+    margin-right: 5px;
+}
+
+.certification-button:hover {
+    background-color: #6a0dad;
+}
+@media (max-width: 768px) 
+{
+    .certifications {
+        padding: 30px 20px;
+    }
+    .certification-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certification-card {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+    .certification-icon {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .certification-icon img {
+        max-width: 80px;
+    }
+
+    .certification-content {
+        text-align: center;
+    }
+}
+</style>
+
+   <!-- Mon Parcours Scolaire -->
+   <section class="parcours-scolaire-section">
+    <div class="parcours-scolaire-container mx-auto py-10">
+        <h2>Mon Parcours Scolaire</h2>
+        <hr>
+        
+        <div class="relative flex flex-col items-center">
+            <div class="absolute w-1 bg-gray-400 h-full left-1/2 transform -translate-x-1/2 timeline-line"></div>
+            
+            <!-- 2023–2025 -->
+            <div class="relative mb-10 w-full flex justify-end">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-4 border-blue-600"></div>
+                <div class="w-1/3 pl-2 mr-auto">
+                    <div class="relative">
+                        <div class="bg-blue-600 text-white px-4 py-2 rounded-t-lg shadow-lg">2023–2025</div>
+                        <div class="bg-white shadow-lg p-6 rounded-b-lg">
+                            <p class="font-bold">BTS SIO SISR, Chassagnes à Oullins.</p>
+                            <p>BTS Services Informatiques aux Organisations option Solutions d'Infrastructure, Systèmes et Réseaux.</p>
+                           <a href="https://www.leschassagnes.com"><button   class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">Site web du lycée</button></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2023–2024 -->
+            <div class="relative mb-10 w-full flex justify-start">
+                <div class="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full border-4 border-pink-500"></div>
+                <div class="w-1/3 pr-2 ml-auto">
+                    <div class="relative">
+                        <div class="bg-pink-500 text-white px-4 py-2 rounded-t-lg shadow-lg">2020–2023</div>
+                        <div class="bg-white shadow-lg p-6 rounded-b-lg">
+                            <p class="font-bold">Bac Pro Systèmes Numériques Option R.I.S.C, Lycée polyvalent Aragon-Picasso à Givors.</p>
+                            <p><span class="font-bold">Obtenue avec mention Très Bien.</span></p>
+                            <a href="http://sngivors.free.fr"> <button   class="mt-2 bg-pink-500 text-white px-4 py-2 rounded">Site web du lycée</button></a> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<style>
+/* ---- Section principale pour le parcours scolaire ---- */
+
+
+.parcours-scolaire-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    width: auto;
+text-align: center;
+}
+
+
+.parcours-scolaire-section hr {
+    width: 200px;
+    height: 4px;
+    background-color: #4b0082;
+    border: none;
+    margin: 0 auto 40px;
+}
+
+.parcours-scolaire-section {
+    background-color: #EAEAEA;
+
+}
+
+.parcours-scolaire-container {
+    max-width: 85%; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+}
+
+/* ---- Styles pour le titre ---- */
+.text-center {
+    text-align: center; /* Centre le texte */
+}
+
+.text-2xl {
+    font-size: 1.5rem; /* Taille du texte légèrement agrandie */
+}
+
+.font-bold {
+    font-weight: bold; /* Texte en gras */
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem; /* Marge en bas pour espacement */
+}
+
+/* ---- Styles pour la ligne de séparation sous le titre ---- */
+.flex {
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+}
+
+.justify-center {
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+/* ---- Styles pour la structure des cartes ---- */
+.mb-10 {
+    margin-bottom: 10%; /* Réduit l'espace entre les cartes */
+}
+
+.relative {
+    position: relative; /* Position relative pour permettre l'utilisation d'éléments positionnés absolument */
+}
+
+.w-full {
+    width: 100%; /* Largeur complète pour les éléments */
+}
+
+/* ---- Largeur des cartes ---- */
+.w-1\/3 {
+    width: 40%; /* Augmente la largeur des cartes à 40% */
+}
+
+/* ---- Ajustement des marges et paddings pour les cartes ---- */
+.pl-2 {
+    padding-left: 0.5rem; /* Padding à gauche */
+}
+
+.pr-2 {
+    padding-right: 0.5rem; /* Padding à droite */
+}
+
+.mr-auto {
+    margin-right: auto; /* Marge automatique à droite pour alignement */
+}
+
+.ml-auto {
+    margin-left: auto; /* Marge automatique à gauche pour alignement */
+}
+
+/* ---- Styles pour les lignes et marqueurs verticaux ---- */
+.bg-gray-400 {
+    background-color: #4b0082; /* Couleur de la ligne verticale */
+   margin-bottom: 5%;
+}
+
+.bg-blue-600 {
+    background-color: #2563eb; /* Couleur bleue pour l'expérience 2024-2027 */
+}
+
+.bg-pink-500 {
+    background-color: #e83e8c; /* Couleur rose pour l'expérience 2023-2024 */
+}
+
+.bg-red-600 {
+    background-color: #dc3545; /* Couleur rouge pour l'expérience 2021-2023 */
+}
+
+.bg-yellow-500 {
+    background-color: #ffc107; /* Couleur jaune pour l'expérience 2021 */
+}
+
+.bg-gray-800 {
+    background-color: #343a40; /* Couleur grise pour l'expérience 2018 */
+}
+
+.bg-teal-500 {
+    background-color: #20c997; /* Couleur turquoise pour l'expérience 2018 */
+}
+
+.text-white {
+    color: #ffffff; /* Texte en blanc */
+}
+
+.px-4 {
+    padding-left: 1rem; /* Padding à gauche */
+    padding-right: 1rem; /* Padding à droite */
+}
+
+.py-2 {
+    padding-top: 0.5rem; /* Padding en haut */
+    padding-bottom: 0.5rem; /* Padding en bas */
+}
+
+/* ---- Styles pour les coins arrondis et ombrages ---- */
+.rounded-t-lg {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.rounded-b-lg {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour les cartes */
+}
+
+.p-6 {
+    padding: 0.5rem; /* Réduit le padding interne des cartes */
+}
+
+.border-4 {
+    border-width: 4px; /* Épaisseur des bordures des marqueurs */
+}
+
+.border-blue-600 {
+    border-color: #2563eb; /* Bordure bleue */
+}
+
+.border-pink-500 {
+    border-color: #e83e8c; /* Bordure rose */
+}
+
+.border-red-600 {
+    border-color: #dc3545; /* Bordure rouge */
+}
+
+.border-yellow-500 {
+    border-color: #ffc107; /* Bordure jaune */
+}
+
+.border-gray-800 {
+    border-color: #343a40; /* Bordure grise */
+}
+
+.border-teal-500 {
+    border-color: #20c997; /* Bordure turquoise */
+}
+
+/* ---- Styles pour le positionnement central des marqueurs circulaires ---- */
+.bg-white {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond blanc pour les marqueurs */
+}
+
+.left-1\/2 {
+    left: 50%; /* Positionnement à 50% depuis la gauche */
+}
+
+.transform {
+    transform: translateX(-50%); /* Centre horizontalement */
+}
+
+.-translate-x-1\/2 {
+    transform: translateX(-50%);
+}
+
+.-translate-y-1\/2 {
+    transform: translateY(-50%);
+}
+
+/* ---- Boutons pour les liens externes ---- */
+.mt-2 {
+    margin-top: 0.5rem; /* Marge au-dessus du bouton */
+}
+
+button {
+    padding: 0.5rem 1rem; /* Espacement interne pour les boutons */
+    background-color: #ffc107; /* Couleur de fond du bouton */
+    color: white; /* Texte blanc */
+    border-radius: 0.25rem; /* Coins légèrement arrondis */
+}
+
+
+ 
+
+@media (max-width: 768px) 
+{
+    .parcours-scolaire-container .w-1\/3 {
+        width: 100% !important;
+    }
+
+    .relative.flex.justify-start,
+    .relative.flex.justify-end {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .timeline-line {
+    display: none;
+  }
+}
+
+    </style>
+
+<section class="fond">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo lt blanc.png" alt="Logo">
+                <p>G.Tony LAMBERT-TATHY</p>
+                <p>© 2025. Tous droits réservé.</p>
+            </div>
+            <div class="footer-section">
+                <h4><strong>Navigation</strong></h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="entreprise.html">Mes expériences</a></li>
+                    <li><a href="projets.html">Mes projets</a></li>
+                    <li><a href="veille.html">Ma veille</a></li>
+                    <li><a href="profil.html">Mon bilan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4><strong>Contact</strong></h4>
+                <ul>
+                    <li><a href="mailto:g.tony@lamberttathy.com">G.tony@lamberttathy.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/g-tony-lambert-tathy-54774123a">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4><strong>Informations</strong></h4>
+                <ul>
+                    <li><a href="mentionslégales.html">Mentions Légales</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <a href="#top" class="back-to-top">↑</a>
+    </footer>
+</section>
+
+
+
+
+
+
+</body>
+</html>

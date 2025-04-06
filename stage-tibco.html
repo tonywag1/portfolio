@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticketing</title>
+  <link rel="stylesheet" href="stylenavbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+  <style>
+    body {
+
+      background-color: #f1f1f1;
+      color: #000;
+      
+      text-align: center;
+    }
+
+    .tout {
+      padding: 40px 20px;
+}
+
+    body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    a{
+     text-decoration: none;
+     color: #000;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+
+    ul li {
+      font-size: 1.2rem;
+      margin: 5px 0;
+    }
+
+    .section-link {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 50px;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-link ul {
+      margin-top: 10px;
+    }
+
+    .section-link li {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-link li::before {
+      content: "📎";
+      margin-right: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 2px solid black;
+      background-color: white;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const icon = document.getElementById('menuIcon');
+    
+            sidebar.classList.toggle('expanded');
+    
+            if (sidebar.classList.contains('expanded')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times'); // croix
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars'); // burger
+            }
+        }
+    </script>
+
+    <!-- Navbar -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-btn" onclick="toggleSidebar()" id="menuToggle">
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="home "><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="entreprise.html" class="entreprise"><i class="fas fa-briefcase"></i><span>Entreprise</span></a></li>
+            <li><a href="projets.html" class="realisations"><i class="fas fa-layer-group"></i><span>Réalisation</span></a></li>
+            <li><a href="veille.html" class="veille"><i class="fas fa-globe"></i><span>Veille</span></a></li>
+            <li><a href="profil.html" class="bilan"><i class="fas fa-user"></i><span>Bilan</span></a></li>
+        </ul>
+    </div>
+
+
+
+<div class="tout">
+    <h1>✅ Missions informatiques réalisées chez TIBCO Services</h1>
+
+    <h2>🔧 Maintenance & Réparation</h2>
+    <ul>
+      <li>Réparation matérielle/logicielle : RAM, OS, batterie...</li>
+      <li>Remplacement de composants</li>
+    </ul>
+  
+    <h2>💻 Installation de postes</h2>
+    <ul>
+      <li>Préparation complète + masterisation via PXE</li>
+      <li>Gestion via base de données</li>
+    </ul>
+  
+    <h2>🖥️ Déploiement d’équipements</h2>
+    <ul>
+      <li>Caisses, SCANBOX, bornes interactives</li>
+    </ul>
+  
+    <h2>🌐 Réseau & infrastructure</h2>
+    <ul>
+      <li>Brassage, configuration de switchs</li>
+      <li>Utilisation des adresses MAC pour identification</li>
+    </ul>
+  
+    <h2>🖨️ Gestion périphériques</h2>
+    <ul>
+      <li>Imprimantes, scanners, périphériques divers</li>
+    </ul>
+  
+    <h2>🏷️ Gestion de stock IT</h2>
+    <ul>
+      <li>Préparation, rangement, suivi matériel</li>
+    </ul>
+  
+    <h2>📝 Rédaction technique</h2>
+    <ul>
+      <li>Comptes-rendus pour les clients</li>
+    </ul>
+  
+    <div class="separator"></div>
+
+  <div class="section-link">
+    <p><strong>Pour en savoir plus :</strong></p>
+    <ul>
+      <a href="raport de stage tibco.pdf"><li>Rapport de stage TIBCO</li></a>
+      
+    </ul>
+  </div>
+
+  <a href="entreprise.html"><button class="btn">RETOUR EN ARRIÈRE</button></a>
+
+</div>
+  <section class="fond">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo lt blanc.png" alt="Logo">
+                <p>G.Tony LAMBERT-TATHY</p>
+                <p>© 2025. Tous droits réservé.</p>
+            </div>
+            <div class="footer-section">
+                <h4><strong>Navigation</strong></h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="entreprise.html">Mes expériences</a></li>
+                    <li><a href="projets.html">Mes projets</a></li>
+                    <li><a href="veille.html">Ma veille</a></li>
+                    <li><a href="profil.html">Mon bilan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4><strong>Contact</strong></h4>
+                <ul>
+                    <li><a href="mailto:g.tony@lamberttathy.com">G.tony@lamberttathy.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/g-tony-lambert-tathy-54774123a">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4><strong>Informations</strong></h4>
+                <ul>
+                    <li><a href="mentionslégales.html">Mentions Légales</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+        <a href="#top" class="back-to-top">↑</a>
+    </footer>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stylenavbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Correction pour empêcher le défilement horizontal */
+        html, body { margin: 0; padding: 0; overflow-x: hidden; text-align: center; }
+
+        /* Effet sur les cartes */
+        .article-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body style="background-color: #EAEAEA;">
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const icon = document.getElementById('menuIcon');
+    
+            sidebar.classList.toggle('expanded');
+    
+            if (sidebar.classList.contains('expanded')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times'); // croix
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars'); // burger
+            }
+        }
+    </script>
+
+    <!-- Navbar -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-btn" onclick="toggleSidebar()" id="menuToggle">
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="home"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="entreprise.html" class="entreprise"><i class="fas fa-briefcase"></i><span>Mes expériences</span></a></li>
+            <li><a href="projets.html" class="realisations"><i class="fas fa-layer-group"></i><span>Mes projets</span></a></li>
+            <li><a href="veille.html" class="veille active"><i class="fas fa-globe"></i><span>Veille</span></a></li>
+            <li><a href="profil.html" class="bilan"><i class="fas fa-user"></i><span>Bilan</span></a></li>
+        </ul>
+    </div>
+
+
+
+    <!-- Bannière pleine page avec titre plus grand et barre blanche épaisse -->
+    <header class="relative w-screen h-screen bg-cover bg-center flex flex-col items-center justify-center text-center" 
+            style="background-image: url('fond\ veille.png');">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <h1 class="text-white text-7xl font-extrabold relative z-10 uppercase">VEILLE TECHNOLOGIQUE</h1>
+        <!-- Barre blanche plus épaisse -->
+        <div class="w-1/4 bg-white h-[10px] mt-4 relative z-10"></div>
+               <!-- Scroll Indicator -->
+<a href="#description" class="scroll-indicator">
+    <div class="mouse"></div>
+    <div class="arrow"></div>
+  </a>
+    </header>
+
+    <!-- Section Veille Technologique -->
+    <section class="w-4/5 mx-auto mt-20" id="description">
+        <h2 class="text-3xl font-extrabold mb-6">Ma veille technologique et mes outils</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+            Pour réaliser ma veille technologique, j’utilise <strong>Google Alertes</strong>, qui m’envoie chaque semaine les actualités liées aux technologies dans la logistique. Cela me permet de rester informé des innovations majeures.<br><br>
+            J’ai également sélectionné des sources fiables comme <strong>Slimstock</strong>, <strong>IBM</strong>, <strong>ActuIA</strong>, <strong>France Supply Chain</strong> ou encore <strong>Le Monde Informatique</strong>, pour enrichir mes recherches.<br><br>
+            Ma veille porte sur <strong>les nouvelles technologies dans les supply chains</strong>, notamment la <strong>blockchain</strong>, l’<strong>intelligence artificielle</strong>, l’<strong>IoT</strong>, les <strong>jumeaux numériques</strong>, la <strong>robotique</strong> et la <strong>logistique durable</strong>.
+          </p>
+    </section>
+
+    <!-- Séparateur épais et noir -->
+    <div class="w-3/5 mx-auto bg-black h-[4px] my-16"></div>
+
+    <!-- Section Blockchain -->
+    <section class="w-4/5 mx-auto">
+        <h2 class="text-3xl font-extrabold mb-6">Qu’est-ce qu’une supply chain ?</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+            La <strong>supply chain</strong>, ou chaîne d’approvisionnement, regroupe l’ensemble des étapes nécessaires pour <strong>acheminer un produit</strong> depuis le fournisseur jusqu’au client final.<br><br>
+            Elle comprend la gestion des <strong>stocks, transports, entrepôts, flux d’information</strong>, et implique différents acteurs : producteurs, transporteurs, distributeurs…<br><br>
+            Son objectif est d’assurer <strong>la disponibilité des produits</strong>, au bon moment, au bon endroit, au moindre coût, tout en garantissant la qualité.
+          </p>
+    </section>
+
+    <!-- Séparateur épais et noir -->
+    <div class="w-3/5 mx-auto bg-black h-[4px] my-16"></div>
+    <section class="w-4/5 mx-auto">
+        <h2 class="text-3xl font-extrabold mb-6">Pourquoi y a-t-il des nouvelles technologies dans les supply chains ?</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+            Les supply chains évoluent face à des défis croissants : <strong>volatilité des marchés, crises sanitaires, exigence de traçabilité, durabilité…</strong><br><br>
+            Pour y répondre, les entreprises adoptent des <strong>technologies avancées</strong> :
+            <ul class="list-none mt-6 space-y-2 text-gray-700 text-center">
+                <li><strong>L’IA</strong> pour prédire la demande et automatiser les entrepôts,</li>
+                <li><strong>La blockchain</strong> pour assurer une traçabilité infalsifiable,</li>
+                <li><strong>L’IoT</strong> pour suivre les marchandises en temps réel,</li>
+                <li><strong>Les jumeaux numériques</strong> pour simuler et anticiper les risques,</li>
+                <li><strong>La robotique</strong> pour accélérer la logistique.</li>
+              </ul>
+              <br>
+              Ces innovations rendent la supply chain <strong>plus efficace, réactive, transparente et écologique</strong>, tout en renforçant la compétitivité des entreprises.
+            </p>
+            <br> 📎 <a href="Veille_Technologique_Supply_Chain_2023_2025_avec_sources.pdf" target="_blank">Télécharger le rapport</a>
+            <br> 📎 <a href="https://tony-ltg.my.canva.site/nouvelles-technologies-dans-la-supply-chain" target="_blank">Voir la présentation</a>
+    </section>
+       <!-- Séparateur épais et noir -->
+       <div class="w-3/5 mx-auto bg-black h-[4px] my-16"></div>
+</section>
+
+
+
+<!-- Section Articles -->
+<section class="w-4/5 mx-auto mb-20">
+    <h2 class="text-3xl font-extrabold mb-6 text-center">Mes articles</h2>
+
+<!-- Barre de recherche avec bouton reset -->
+<div class="flex justify-center items-center gap-4 mb-10">
+    <input type="text" id="searchInput" placeholder="Rechercher un article" class="w-1/3 p-3 border border-gray-300 rounded-md">
+    <button onclick="searchArticles()" class="bg-gray-800 text-white px-5 py-3 rounded-md">Rechercher</button>
+    <button onclick="resetSearch()" class="bg-gray-500 text-white px-5 py-3 rounded-md">Réinitialiser</button>
+  </div>
+
+
+<!-- Articles sous forme de cartes longues -->
+<div class="grid md:grid-cols-3 gap-6">
+
+<!-- Article 1 -->
+<div class="bg-white shadow-md rounded-lg overflow-hidden article-card flex flex-col">
+    <img src="https://www.slimstock.com/wp-content/uploads/2025/01/Supply-Chain-Trends-for-2025-Slimstock.webp" class="w-full h-48 object-cover" alt="IA Supply Chain">
+    <div class="p-6 text-left flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-3">Les 10 tendances Supply Chain 2025</h3>
+        <p class="text-gray-600 text-sm flex-grow">
+            IA, cybersécurité, résilience : les grandes priorités de la supply chain pour 2025.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+            <span class="text-gray-500 text-sm">Mars 2025</span>
+            <a href="https://www.slimstock.com/fr/blog/tendances-supply-chain-2025/" class="bg-blue-500 text-white px-4 py-2 rounded-md font-bold">Plus d'infos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Article 2 -->
+<div class="bg-white shadow-md rounded-lg overflow-hidden article-card flex flex-col">
+    <img src="https://www.actuia.com/logo2.png" class="w-full h-48 object-cover" alt="Blockchain et IA">
+    <div class="p-6 text-left flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-3">IA & Blockchain dans la Supply Chain</h3>
+        <p class="text-gray-600 text-sm flex-grow">
+            Une meilleure traçabilité et sécurité avec l’IA et la blockchain (ex : IBM Food Trust).
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+            <span class="text-gray-500 text-sm">13/02/2024</span>
+            <a href="https://www.actuia.com/actualite/comment-lia-et-la-blockchain-transforment-la-supply-chain/" class="bg-blue-500 text-white px-4 py-2 rounded-md font-bold">Plus d'infos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Article 3 -->
+<div class="bg-white shadow-md rounded-lg overflow-hidden article-card flex flex-col">
+    <img src="https://www.manutan.fr/fstrz/r/s/www.manutan.fr/blog/wp-content/uploads/2024/08/A00338P1-scaled.jpeg?frz-v=119" class="w-full h-48 object-cover" alt="IA logistique">
+    <div class="p-6 text-left flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-3">L’IA optimise la logistique</h3>
+        <p class="text-gray-600 text-sm flex-grow">
+            L’IA réduit les coûts, optimise les stocks et anticipe la demande.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+            <span class="text-gray-500 text-sm">19 août 2024</span>
+            <a href="https://www.manutan.fr/blog/general/ia-supply-chain-revolutionner-optimisation-logistique/" class="bg-blue-500 text-white px-4 py-2 rounded-md font-bold">Plus d'infos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Article 4 -->
+<div class="bg-white shadow-md rounded-lg overflow-hidden article-card flex flex-col">
+    <img src="https://akanea.com/wp-content/uploads/2023/01/tendances-supply-chain-2024.jpg" class="w-full h-48 object-cover" alt="Tendances logistique 2025">
+    <div class="p-6 text-left flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-3">Tendances Supply Chain 2025</h3>
+        <p class="text-gray-600 text-sm flex-grow">
+            Machine learning, cybersécurité et digitalisation au cœur des enjeux 2025.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+            <span class="text-gray-500 text-sm">10/01/2025</span>
+            <a href="https://akanea.com/tendances-supply-chain/" class="bg-blue-500 text-white px-4 py-2 rounded-md font-bold">Plus d'infos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Article 5 -->
+<div class="bg-white shadow-md rounded-lg overflow-hidden article-card flex flex-col">
+    <img src="https://www.intelligence-artificielle-school.com/wp-content/uploads/2023/10/1.jpg" class="w-full h-48 object-cover" alt="IA industrie du futur">
+    <div class="p-6 text-left flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-3">IA & Supply Chain : industrie du futur</h3>
+        <p class="text-gray-600 text-sm flex-grow">
+            L’IA révolutionne la gestion d’entrepôts et booste la productivité.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+            <span class="text-gray-500 text-sm">Date non précisée</span>
+            <a href="https://www.intelligence-artificielle-school.com/alternance-et-entreprises/secteur-d-activite/intelligence-artificielle-et-supply-chain/" class="bg-blue-500 text-white px-4 py-2 rounded-md font-bold">Plus d'infos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Article 6 -->
+<div class="bg-white shadow-md rounded-lg overflow-hidden article-card flex flex-col">
+    <img src="data:image/png;base64,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" class="w-full h-48 object-cover" alt="Blockchain IBM">
+    <div class="p-6 text-left flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-3">Blockchain & Supply Chain</h3>
+        <p class="text-gray-600 text-sm flex-grow">
+            IBM montre comment la blockchain renforce traçabilité, transparence et résilience.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+            <span class="text-gray-500 text-sm">Date non précisée</span>
+            <a href="https://www.ibm.com/fr-fr/blockchain-supply-chain" class="bg-blue-500 text-white px-4 py-2 rounded-md font-bold">Plus d'infos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Article 7 -->
+<div class="bg-white shadow-md rounded-lg overflow-hidden article-card flex flex-col">
+    <img src="https://www.francesupplychain.org/wp-content/themes/yootheme/cache/2f/nouvelles-technologies-supply-chain-par-generix-2f68226c.webp" class="w-full h-48 object-cover" alt="Tendances expert 2025">
+    <div class="p-6 text-left flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-3">Décryptage des tendances 2025</h3>
+        <p class="text-gray-600 text-sm flex-grow">
+            Focus sur la logistique 4.0 : automatisation, IA, et performance.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+            <span class="text-gray-500 text-sm">Février 2025</span>
+            <a href="https://www.francesupplychain.org/tendances-supply-chain-2025-decryptage-et-recommandations-dexpert/" class="bg-blue-500 text-white px-4 py-2 rounded-md font-bold">Plus d'infos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Article 8 -->
+<div class="bg-white shadow-md rounded-lg overflow-hidden article-card flex flex-col">
+    <img src="https://www.synox.io/wp-content/uploads/2022/12/chaine-logistique_image2.jpg.webp" class="w-full h-48 object-cover" alt="IoT IA Blockchain">
+    <div class="p-6 text-left flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-3">Techno : IoT, IA & Blockchain</h3>
+        <p class="text-gray-600 text-sm flex-grow">
+            Trois piliers pour améliorer la visibilité et la rentabilité de la logistique.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+            <span class="text-gray-500 text-sm">Date non précisée</span>
+            <a href="https://www.synox.io/cat-smart-logistics/chaine-logistique/" class="bg-blue-500 text-white px-4 py-2 rounded-md font-bold">Plus d'infos</a>
+        </div>
+    </div>
+</div>
+
+<!-- Article 9 -->
+<div class="bg-white shadow-md rounded-lg overflow-hidden article-card flex flex-col">
+    <img src="https://www.synox.io/wp-content/uploads/2022/03/Supply-chain-4.0-intelligence-artificielle.png.webp" class="w-full h-48 object-cover" alt="Supply Chain 4.0">
+    <div class="p-6 text-left flex flex-col flex-grow">
+        <h3 class="text-xl font-bold mb-3">Supply Chain 4.0 intelligente</h3>
+        <p class="text-gray-600 text-sm flex-grow">
+            L’IA transforme la chaîne logistique en système intelligent, agile et réactif.
+        </p>
+        <div class="mt-4 flex justify-between items-center">
+            <span class="text-gray-500 text-sm">Date non précisée</span>
+            <a href="https://www.synox.io/cat-smart-logistics/iot-intelligence-artificielle-supply-chain-4-0/" class="bg-blue-500 text-white px-4 py-2 rounded-md font-bold">Plus d'infos</a>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section class="fond">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo lt blanc.png" alt="Logo">
+                <p>G.Tony LAMBERT-TATHY</p>
+                <p>© 2025. Tous droits réservé.</p>
+            </div>
+            <div class="footer-section">
+                <h4><strong>Navigation</strong></h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="entreprise.html">Mes expériences</a></li>
+                    <li><a href="projets.html">Mes projets</a></li>
+                    <li><a href="veille.html">Ma veille</a></li>
+                    <li><a href="profil.html">Mon bilan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4><strong>Contact</strong></h4>
+                <ul>
+                    <li><a href="mailto:g.tony@lamberttathy.com">G.tony@lamberttathy.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/g-tony-lambert-tathy-54774123a">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4><strong>Informations</strong></h4>
+                <ul>
+                    <li><a href="mentionslégales.html">Mentions Légales</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+        <a href="#top" class="back-to-top">↑</a>
+    </footer>
+</section>
+
+    <style>
+       body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3 {
+      font-weight: 500;
+    }
+
+    p, li, a {
+      font-size: 1.2rem;
+    }
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.6rem !important;}
+    p, li, a {
+      font-size: 1rem;
+    }
+    h1 {
+        font-size: 2.8rem !important;}
+}
+    p {
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+
+    .certification-button {
+    background-color: #4b0082;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    align-self: center;
+    margin-top: auto;
+}
+
+.certification-button i {
+    margin-right: 5px;
+}
+
+.certification-button:hover {
+    background-color: #6a0dad;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: float 2s infinite ease-in-out;
+}
+
+.mouse {
+  width: 25px;
+  height: 45px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.mouse::after {
+  content: "";
+  width: 4px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-wheel 1.5s infinite;
+}
+
+.arrow {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+  animation: bounce 2s infinite;
+}
+
+.arrow::before {
+  content: "⌄"; /* flèche vers le bas */
+  font-size: 1.5rem;
+}
+
+@keyframes scroll-wheel {
+  0% { opacity: 1; top: 10px; }
+  100% { opacity: 0; top: 25px; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -5px); }
+}
+
+
+
+
+    </style>
+
+<script>
+    function searchArticles() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const articles = document.querySelectorAll('.article-card');
+    
+      articles.forEach(article => {
+        const title = article.querySelector('h3').textContent.toLowerCase();
+        const description = article.querySelector('p').textContent.toLowerCase();
+    
+        if (title.includes(input) || description.includes(input)) {
+          article.style.display = 'flex';
+        } else {
+          article.style.display = 'none';
+        }
+      });
+    }
+    
+    function resetSearch() {
+      document.getElementById('searchInput').value = "";
+      const articles = document.querySelectorAll('.article-card');
+      articles.forEach(article => {
+        article.style.display = 'flex';
+      });
+    }
+    
+    // Recherche en live pendant la saisie
+    document.getElementById('searchInput').addEventListener('input', searchArticles);
+    </script>
+</body>
+</html>

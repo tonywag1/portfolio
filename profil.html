@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Bilan - Soft Skills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylenavbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        /* Fond en dégradé */
+        body {
+            background: linear-gradient(to right, #E86A73, #F3C45D, #A8E063);
+           
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  h1, h2, h3 {
+      font-weight: 500;
+    }
+
+    p, li, a {
+      font-size: 1.2rem;
+    }
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.6rem !important;}
+    p, li, a {
+      font-size: 1rem;
+    }
+    h1 {
+        padding: 15px;}
+}
+    p {
+      font-weight: 300;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+
+     /* Barre sous les titres */
+     .underline {
+            width: 100px;
+            height: 4px;
+            background-color: black;
+            margin: 8px auto;
+        }
+
+        /* Conteneur des sections */
+        .section-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            margin: auto;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .text-container {
+            flex: 1;
+        }
+
+        .image-container {
+            flex: 1;
+            
+        }
+
+        .image-container img {
+            max-width: 80%;
+        }
+
+        .image-containere {
+            flex: 1;
+            padding-left: 7%;
+        }
+
+        .image-containere img {
+            max-width: 80%;
+        }
+        /* Conteneur du jeu */
+        .game-container {
+            width: 93%;
+            height: 100vh;
+            margin-left: 5%;
+            margin-right: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Grille 4x4 */
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 15px;
+            width: 100%;
+            height: 90vh;
+        }
+
+        /* Style des cartes */
+        .card {
+            background-color: white;
+            border: 2px solid black;
+            cursor: pointer;
+            transition: transform 0.5s ease, background-color 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        /* Logo sur le dos des cartes */
+        .card .card-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('logo tony.png'); /* Logo */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Cacher le logo quand la carte est retournée */
+        .card.flipped .card-back {
+            opacity: 0;
+        }
+
+        /* Désactiver le clic sur une carte trouvée */
+        .matched {
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* Pop-up (modal) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .modal h2 {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .modal p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .modal button {
+            margin-top: 15px;
+            padding: 8px 12px;
+            background-color: gray;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .modal button:hover {
+            background-color: black;
+        }
+
+        @media (max-width: 768px) {
+    .content h1 {
+        font-size: 2,2rem;
+    }
+    .game-container {
+           
+           padding: auto;
+            
+        }
+    .content h2 {
+        font-size: 1.8rem;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const icon = document.getElementById('menuIcon');
+    
+            sidebar.classList.toggle('expanded');
+    
+            if (sidebar.classList.contains('expanded')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times'); // croix
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars'); // burger
+            }
+        }
+    </script>
+
+    <!-- Navbar -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-btn" onclick="toggleSidebar()" id="menuToggle">
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="home"><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="entreprise.html" class="entreprise"><i class="fas fa-briefcase"></i><span>Mes expériences</span></a></li>
+            <li><a href="projets.html" class="realisations"><i class="fas fa-layer-group"></i><span>Mes projets</span></a></li>
+            <li><a href="veille.html" class="veille"><i class="fas fa-globe"></i><span>Veille</span></a></li>
+            <li><a href="profil.html" class="bilan active"><i class="fas fa-user"></i><span>Bilan</span></a></li>
+        </ul>
+    </div>
+
+       
+        <!-- Section 1: Mon Bilan -->
+        <section class="section-container">
+            <div class="text-container">
+                <h1 class="text-6xl font-bold">Mon Bilan</h1>
+                <div class="underline"></div>
+                <p class="text-lg mt-4">
+                    Pendant mon BTS, j'ai acquis de nombreuses compétences en informatique et en gestion de projet.<br>
+                    Ce bilan présente mes <strong>soft skills</strong> développés à travers mes expériences académiques et professionnelles.
+                </p>
+            </div>
+            <div class="image-containere">
+                <img src="bureau.png" alt="Illustration">
+            </div>
+        </section>
+    
+        <!-- Section 2: Explication du jeu -->
+        <section class="section-container">
+            <div class="image-container">
+                <img src="peau.png" alt="Discussion">
+            </div>
+            <div class="text-container">
+                <h2 class="text-4xl font-bold">Règles</h2>
+                <div class="underline"></div>
+                <p class="text-lg mt-4">
+                    Ce jeu de mémoire vous permet de découvrir mes <strong>soft skills</strong> développés en BTS.<br>
+                    Trouvez les <strong>2 cartes identiques</strong>, et un message apparaîtra pour expliquer comment j’ai acquis cette compétence !
+                </p>
+            </div>
+        </section>
+    <!-- Section 3: Jeu de mémoire -->
+    <section class="game-container">
+        <div class="game-board">
+            <!-- Les cartes seront insérées ici en JS -->
+        </div>
+    </section>
+
+    <!-- Pop-up (modal) -->
+    <div id="popup" class="modal">
+        <h2 id="popup-title">Compétence acquise !</h2>
+        <p id="popup-text"></p>
+        <button onclick="closePopup()">Fermer</button>
+    </div>
+
+    <section class="fond">
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="logo lt blanc.png" alt="Logo">
+                    <p>G.Tony LAMBERT-TATHY</p>
+                    <p>© 2025. Tous droits réservé.</p>
+                </div>
+                <div class="footer-section">
+                    <h4><strong>Navigation</strong></h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="entreprise.html">Mes expériences</a></li>
+                        <li><a href="projets.html">Mes projets</a></li>
+                        <li><a href="veille.html">Ma veille</a></li>
+                        <li><a href="profil.html">Mon bilan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><strong>Contact</strong></h4>
+                    <ul>
+                        <li><a href="mailto:g.tony@lamberttathy.com">G.tony@lamberttathy.com</a></li>
+                        <li><a href="https://www.linkedin.com/in/g-tony-lambert-tathy-54774123a">LinkedIn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4><strong>Informations</strong></h4>
+                    <ul>
+                        <li><a href="mentionslégales.html">Mentions Légales</a></li>
+                    
+                    </ul>
+                </div>
+            </div>
+            <a href="#top" class="back-to-top">↑</a>
+        </footer>
+    </section>
+
+
+    
+
+       
+
+    <script>
+        const softSkills = [
+            { skill: "Autonomie", text: "Durant mes années en BTS, j'ai gagné en autonomie." },
+            { skill: "Travail d'équipe", text: "Collaborer sur des projets m'a appris à mieux travailler en équipe." },
+            { skill: "Organisation", text: "Gérer plusieurs projets m'a rendu plus organisé." },
+            { skill: "Adaptabilité", text: "J'ai appris à m'adapter aux problèmes en entreprise." },
+            { skill: "Communication", text: "Les présentations m'ont aidé à améliorer ma communication." },
+            { skill: "Résolution de problèmes", text: "Faire face aux défis techniques m'a appris à résoudre les problèmes." },
+            { skill: "Gestion du stress", text: "Respecter les deadlines m'a permis de mieux gérer mon stress." },
+            { skill: "Prise d'initiative", text: "J'ai su prendre des initiatives dans mon travail." }
+        ];
+
+        let cardsArray = [...softSkills, ...softSkills];
+        cardsArray.sort(() => Math.random() - 0.5);
+
+        const gameBoard = document.querySelector(".game-board");
+
+        let firstCard = null;
+        let secondCard = null;
+        let lockBoard = false;
+
+        // Création des cartes dynamiquement
+        cardsArray.forEach(({ skill, text }) => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.dataset.skill = skill;
+            card.dataset.text = text;
+            card.innerHTML = `<div class="card-back"></div>`;
+            gameBoard.appendChild(card);
+
+            card.addEventListener("click", function () {
+                if (lockBoard || this.classList.contains("flipped")) return;
+
+                this.classList.add("flipped");
+                this.innerHTML = `<span>${this.dataset.skill}</span>`;
+
+                if (!firstCard) {
+                    firstCard = this;
+                } else {
+                    secondCard = this;
+                    lockBoard = true;
+
+                    if (firstCard.dataset.skill === secondCard.dataset.skill) {
+                        setTimeout(() => {
+                            firstCard.classList.add("matched");
+                            secondCard.classList.add("matched");
+                            showPopup(firstCard.dataset.text);
+                            resetCards();
+                        }, 500);
+                    } else {
+                        setTimeout(() => {
+                            firstCard.classList.remove("flipped");
+                            secondCard.classList.remove("flipped");
+                            firstCard.innerHTML = `<div class="card-back"></div>`;
+                            secondCard.innerHTML = `<div class="card-back"></div>`;
+                            resetCards();
+                        }, 1000);
+                    }
+                }
+            });
+        });
+
+        function resetCards() {
+            firstCard = null;
+            secondCard = null;
+            lockBoard = false;
+        }
+
+        function showPopup(text) {
+            document.getElementById("popup-text").innerText = text;
+            document.getElementById("popup").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

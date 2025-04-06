@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage Smartgap</title>
+  <link rel="stylesheet" href="stylenavbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f1f1f1;
+      color: #000;
+      
+      text-align: center;
+    }
+    .tout {
+      padding: 40px 20px;
+}
+    body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    a{
+     text-decoration: none;
+     color: #000;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+
+    ul li {
+      font-size: 1.2rem;
+      margin: 5px 0;
+    }
+
+    .section-link {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 50px;
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-link ul {
+      margin-top: 10px;
+    }
+
+    .section-link li {
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-link li::before {
+      content: "📎";
+      margin-right: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      border: 2px solid black;
+      background-color: white;
+      font-weight: bold;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const icon = document.getElementById('menuIcon');
+    
+            sidebar.classList.toggle('expanded');
+    
+            if (sidebar.classList.contains('expanded')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    </script>
+
+    <!-- Navbar -->
+    <div class="sidebar" id="sidebar">
+        <div class="menu-btn" onclick="toggleSidebar()" id="menuToggle">
+            <i class="fas fa-bars" id="menuIcon"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="home "><i class="fas fa-home"></i><span>Home</span></a></li>
+            <li><a href="entreprise.html" class="entreprise"><i class="fas fa-briefcase"></i><span>Entreprise</span></a></li>
+            <li><a href="projets.html" class="realisations"><i class="fas fa-layer-group"></i><span>Réalisation</span></a></li>
+            <li><a href="veille.html" class="veille"><i class="fas fa-globe"></i><span>Veille</span></a></li>
+            <li><a href="profil.html" class="bilan"><i class="fas fa-user"></i><span>Bilan</span></a></li>
+        </ul>
+    </div>
+<div class="tout">
+    <h1>✅ Missions informatiques réalisées chez Smartgap</h1>
+
+    <!-- Stage 1 : Pentest -->
+    <h2>📅 Stage 1 – du 06/05/2024 au 07/06/2024 (Cybersécurité)</h2>
+    
+    <h3>🔐 Audit de sécurité & Pentest</h3>
+    <ul>
+      <li>Analyse des vulnérabilités dans des environnements web (pentest local en greybox)</li>
+      <li>Utilisation de Kali Linux, Burp Suite, WPScan, ZAP, Nmap, TheHarvester, FFuF</li>
+      <li>Test en boîte grise selon les règles définies avec le tuteur (périmètre contrôlé)</li>
+    </ul>
+    
+    <h3>🧮 Analyse des risques & plans d’action</h3>
+    <ul>
+      <li>Évaluation des failles selon la norme ISO 27005</li>
+      <li>Élaboration de matrices de risques (impact × probabilité)</li>
+      <li>Proposition de plans d'action correctifs (mise à jour CMS, sécurisation)</li>
+    </ul>
+    
+    <h3>🛠️ Résolution de problèmes & contournements</h3>
+    <ul>
+      <li>Blocage IP résolu grâce à Onion over VPN (NordVPN)</li>
+      <li>Recueil d’informations via OSINT et analyse de réseaux sociaux</li>
+    </ul>
+    
+    <h3>📝 Documentation technique</h3>
+    <ul>
+      <li>Rédaction de rapports hebdomadaires + rapport final détaillé</li>
+      <li>Fiches outils, schémas de synthèse et annexes techniques</li>
+    </ul>
+    
+    <hr>
+    
+    <!-- Stage 2 : Automatisation -->
+    <h2>📅 Stage 2 – du 06/01/2025 au 21/02/2025 (Automatisation & Web)</h2>
+    
+    <h3>🤖 Automatisation</h3>
+    <ul>
+      <li>Création de workflows automatisés avec n8n</li>
+      <li>Connexion d'API externes (Gmail, Telegram, OpenAI/OpenRouter)</li>
+      <li>Automatisation de réponses par IA aux e-mails clients (validation via Telegram)</li>
+    </ul>
+    
+    <h3>📩 Intégration web + automatisation</h3>
+    <ul>
+      <li>Connexion entre des formulaires Hostinger et le système d’automatisation</li>
+      <li>Traitement intelligent des emails entrants et déclenchement de workflows</li>
+    </ul>
+    
+    <h3>📊 Gestion des flux et alertes</h3>
+    <ul>
+      <li>Déclenchements conditionnels via "If" et "Switch"</li>
+      <li>Suivi des réponses et notifications en temps réel sur Telegram</li>
+    </ul>
+    
+    <h3>🌐 Création du nouveau site de l’entreprise</h3>
+    <ul>
+      <li>Installation et personnalisation d’un site WordPress sur Hostinger</li>
+      <li>Structuration du contenu, configuration du thème, optimisation SEO</li>
+    </ul>
+    
+    <h3>📝 Documentation technique</h3>
+    <ul>
+      <li>Rédaction de la procédure d’installation complète du système (n8n + API)</li>
+      <li>Schémas d’architecture des flux automatisés et guides utilisateurs</li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <div class="section-link">
+      <p><strong>Pour en savoir plus :</strong></p>
+      <ul>
+        <a href="rapports de stage smargap io .pdf"><li>Rapport de stage Smartgap</li></a>
+      </ul>
+    </div>
+
+    <a href="entreprise.html"><button class="btn">RETOUR EN ARRIÈRE</button></a>
+
+  </div>
+    <section class="fond">
+      <footer>
+          <div class="footer-container">
+              <div class="footer-logo">
+                  <img src="logo lt blanc.png" alt="Logo">
+                  <p>G.Tony LAMBERT-TATHY</p>
+                  <p>© 2025. Tous droits réservé.</p>
+              </div>
+              <div class="footer-section">
+                  <h4><strong>Navigation</strong></h4>
+                  <ul>
+                      <li><a href="index.html">Accueil</a></li>
+                      <li><a href="entreprise.html">Mes expériences</a></li>
+                      <li><a href="projets.html">Mes projets</a></li>
+                      <li><a href="veille.html">Ma veille</a></li>
+                      <li><a href="profil.html">Mon bilan</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                  <h4><strong>Contact</strong></h4>
+                  <ul>
+                      <li><a href="mailto:g.tony@lamberttathy.com">G.tony@lamberttathy.com</a></li>
+                      <li><a href="https://www.linkedin.com/in/g-tony-lambert-tathy-54774123a">LinkedIn</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                  <h4><strong>Informations</strong></h4>
+                  <ul>
+                      <li><a href="mentionslégales.html">Mentions Légales</a></li>
+                     
+                  </ul>
+              </div>
+          </div>
+          <a href="#top" class="back-to-top">↑</a>
+      </footer>
+  </section>
+
+</body>
+</html>

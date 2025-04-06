@@ -1,0 +1,117 @@
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: 3.5%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    transition: margin-left 0.3s ease;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    margin: 5px 0;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10%;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.back-to-top:hover {
+    background-color: #555;
+}
+
+.fond {
+    background-color: #ebeced;
+}
+
+
+/* ✅ Responsive : supprime le décalage et centre tout */
+@media screen and (max-width: 768px) {
+    footer {
+        margin-left: 0;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    .footer-section {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-to-top {
+        margin-right: 0;
+    }
+}
